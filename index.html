@@ -97,10 +97,26 @@
         </div>
     </section>
 
+    <section id="spinner" class="flex justify-center items-center py-9 hidden">
+        <span class="loading loading-bars loading-xl"></span>
+    </section>
+
+    <!-- search section -->
+    <section class=" flex justify-center items-center pt-16">
+         <div class="join">
+  <div>
+    <label class="input validator join-item">
+      <input id="input-search" type="text" placeholder="Search Vocabulary Here" />
+    </label>
+    
+  </div>
+  <button id="btn-search" class="btn btn-primary join-item">Search</button>
+</div>
+    </section>
     <!-- word section here -->
      <section 
         id="word-container"
-        class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-7 ">
+        class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-2 md:grid-cols-3 gap-7 ">
         
         <div class="text-center col-span-full space-y-5 font-bangla">
             <p class="text-sm font-normal text-[#79716B]">আপনি এখনো কোন Lesson Select করেন নি</p>
@@ -109,6 +125,24 @@
         
         
      </section>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+<dialog id="word-modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container" class="space-y-5">
+        
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
 
     <!-- js file linked here -->
     <script src="./script/index.js"></script>
